@@ -1,11 +1,14 @@
+
 import cmath
 import math
 from tkinter import *
+from turtle import bgcolor
 
 window = Tk()
 window.title("Calculator")
+window['bg']="gray99"
 
-e = Entry(window, width=30, borderwidth=5)
+e = Entry(window, width=45, borderwidth=9,)
 e.grid(row=0, column=0, columnspan=6, padx=10, pady=10)
 
 def button_click(number):
@@ -120,31 +123,31 @@ def button_square_root():
 
 # Def buttons
 
-button_1 = Button(window, text="1", padx=40, pady=20, command=lambda: button_click(1))
-button_2 = Button(window, text="2", padx=40, pady=20, command=lambda: button_click(2))
-button_3 = Button(window, text="3", padx=40, pady=20, command=lambda: button_click(3))
-button_4 = Button(window, text="4", padx=40, pady=20, command=lambda: button_click(4))
-button_5 = Button(window, text="5", padx=40, pady=20, command=lambda: button_click(5))
-button_6 = Button(window, text="6", padx=40, pady=20, command=lambda: button_click(6))
-button_7 = Button(window, text="7", padx=40, pady=20, command=lambda: button_click(7))
-button_8 = Button(window, text="8", padx=40, pady=20, command=lambda: button_click(8))
-button_9 = Button(window, text="9", padx=40, pady=20, command=lambda: button_click(9))
-button_0 = Button(window, text="0", padx=40, pady=20, command=lambda: button_click(0))
-button_add = Button(window, text="+", padx=39, pady=20, command=button_add)
-button_equal = Button(window, text="=", padx=91, pady=20, command=button_equal)
-button_clear = Button(window, text="Clear", padx=79, pady=20, command=button_clear)
+button_1 = Button(window, text="1", padx=40, pady=20, bg="gray75", command=lambda: button_click(1))
+button_2 = Button(window, text="2", padx=40, pady=20, bg="gray75", command=lambda: button_click(2))
+button_3 = Button(window, text="3", padx=40, pady=20, bg="gray75", command=lambda: button_click(3))
+button_4 = Button(window, text="4", padx=40, pady=20, bg="gray75", command=lambda: button_click(4))
+button_5 = Button(window, text="5", padx=40, pady=20, bg="gray75", command=lambda: button_click(5))
+button_6 = Button(window, text="6", padx=40, pady=20, bg="gray75", command=lambda: button_click(6))
+button_7 = Button(window, text="7", padx=40, pady=20, bg="gray75", command=lambda: button_click(7))
+button_8 = Button(window, text="8", padx=40, pady=20, bg="gray75", command=lambda: button_click(8))
+button_9 = Button(window, text="9", padx=40, pady=20, bg="gray75", command=lambda: button_click(9))
+button_0 = Button(window, text="0", padx=40, pady=20, bg="gray75", command=lambda: button_click(0))
+button_add = Button(window, text="+", padx=39, pady=20, bg="dark orange", command=button_add)
+button_equal = Button(window, text="=", padx=91, pady=20, bg="yellow", command=button_equal)
+button_clear = Button(window, text="Clear", padx=79, pady=20, bg="yellow", command=button_clear)
 
-button_subtract = Button(window, text="-", padx=41, pady=20, command=button_subtract)
-button_multiply = Button(window, text="*", padx=40, pady=20, command=button_multiply)
-button_divide = Button(window, text="/", padx=41, pady=20, command=button_divide)
+button_subtract = Button(window, text="-", padx=41, pady=20, bg="dark orange", command=button_subtract)
+button_multiply = Button(window, text="*", padx=40, pady=20, bg="dark orange", command=button_multiply)
+button_divide = Button(window, text="/", padx=41, pady=20, bg="dark orange", command=button_divide)
 
-button_squared = Button(window, text="x²", padx=41, pady=20, command=button_squared)
-button_cubed = Button(window, text="x³", padx=41, pady=20, command=button_cubed)
-button_to_the_power_of = Button(window, text="x^", padx=41, pady=20, command=button_to_the_power_of)
+button_squared = Button(window, text="x²", padx=41, pady=20, bg="gold2", command=button_squared)
+button_cubed = Button(window, text="x³", padx=41, pady=20, bg="gold2", command=button_cubed)
+button_to_the_power_of = Button(window, text="x^", padx=41, pady=20, bg="gold2", command=button_to_the_power_of)
 
-button_pi = Button(window, text="𝝅", padx=41, pady=20, command=button_pi)
+button_pi = Button(window, text="𝝅", padx=41, pady=20, bg="gold2", command=button_pi)
 
-button_square_root = Button(window, text="2√", padx=41, pady=20, command=button_square_root)
+button_square_root = Button(window, text="2√", padx=41, pady=20, bg="gold2", command=button_square_root)
 
  # put buttons on screen
 
@@ -167,13 +170,13 @@ button_equal.grid(row=5, column=2, columnspan=2)
 
 button_subtract.grid(row=6, column=1)
 button_multiply.grid(row=7, column=1)
-button_divide.grid(row=7, column=2)
+button_divide.grid(row=8, column=1)
 
 button_squared.grid(row=4, column=2)
 button_cubed.grid(row=4, column=3)
 button_to_the_power_of.grid(row=7, column=3)
 
-button_pi.grid(row=8, column=1)
+button_pi.grid(row=7, column=2)
 
 button_square_root.grid(row=8, column=2)
 
